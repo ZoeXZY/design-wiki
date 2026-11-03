@@ -1,0 +1,106 @@
+公开资料与本次检索视图
+Design Wiki · public software distribution
+
+本包仅包含15份资料的选定检索正文，不是网站完整镜像。
+rag_corpus.jsonl：本地公开语料快照，包含文档标题、原始链接、资料角色、版本或快照日期、SHA256和分节正文。
+licenses/：保留采集时各来源的许可说明；不统一称为CC。
+W3C资料保留原始来源与状态；Ant Design所选仓库文档遵循MIT；GOV.UK文字依据OGL v3（另有说明除外）；USWDS所选文档仓库声明CC0。具体范围以附带原说明及各页面为准。
+
+本包从此前独立语料下载包中复用已保存文本，没有在本轮重新抓取网页。
+本仓库保留可运行所需的检索视图及来源元数据；raw_file和sha256指向采集时原始来源的标识，不表示仓库包含完整HTML镜像。版权、状态与使用说明见THIRD_PARTY_NOTICES.md。
+rag.py按章节切分；GOV.UK变更记录按日期行再分成独立单元，防止日期与相邻条目串接。
+固定公开语料为193个证据单元，运行时另外加入3条当前本地结构化规则。
+公开语料快照不自动随网页更新；本地规则发布后实时参与检索，旧问答保留当时证据。
+本公开仓库不包含私人业务文档或运行历史。
+
+逐项来源：
+
+act-contrast-rule | ACT Text has minimum contrast rule
+snapshot-2026-11-02 | guidance
+https://www.w3.org/WAI/standards-guidelines/act/rules/afw4f7/proposed/
+SHA256: e042f2284deca7c2c2c807906eee9323f5c3771e747ac65cf5e219a4057defda
+许可说明: https://act-rules.github.io/pages/license/
+
+ant-buttons | Ant Design 按钮设计规范
+snapshot-2026-11-02 | guidance
+https://raw.githubusercontent.com/ant-design/ant-design/master/docs/spec/buttons.zh-CN.md
+SHA256: 9591baec64b32637361faf66150ebbe709c9a9f3ea5a5c1db70671267474e331
+许可说明: https://github.com/ant-design/ant-design/blob/master/LICENSE
+
+ant-copywriting | Ant Design 文案设计规范
+snapshot-2026-11-02 | guidance
+https://raw.githubusercontent.com/ant-design/ant-design/master/docs/spec/copywriting.zh-CN.md
+SHA256: 6af8d512b327e8133c422922e69a16a04f139a31747a840e2abc51a3ee9cef9c
+许可说明: https://github.com/ant-design/ant-design/blob/master/LICENSE
+
+govuk-button | GOV.UK Button guidance
+snapshot-2026-11-02 | guidance
+https://design-system.service.gov.uk/components/button/
+SHA256: da08c91f9058543bab4a5da326cefe37f360ba9ea4e9af2b1e2a40e951189a04
+许可说明: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+
+govuk-button-history | GOV.UK Button change history
+snapshot-2026-11-02 | change_log
+https://design-system.service.gov.uk/components/button/history/
+SHA256: 1c5e5ad0de023bb69405120bc4955b6174cb6043a326220dea3ab57ee3c7a0a8
+许可说明: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+
+govuk-error-message | GOV.UK Error message guidance
+snapshot-2026-11-02 | guidance
+https://design-system.service.gov.uk/components/error-message/
+SHA256: d4dbb065cb8d70813c7f2902ed83d5b70d2348103e929ca6e4577a37838ac081
+许可说明: https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/
+
+uswds-button | USWDS Button guidance and changes
+snapshot-2026-11-02 | guidance
+https://designsystem.digital.gov/components/button/
+SHA256: db0729665c3a29b74772e65acecf182ac0c31504c939a735719ab3016ddb1ff2
+许可说明: https://github.com/uswds/uswds-site/blob/main/LICENSE.md
+
+uswds-button-tests | USWDS Button accessibility test guidance
+snapshot-2026-11-02 | guidance
+https://designsystem.digital.gov/components/button/accessibility-tests/
+SHA256: a0f19ef0779c1cd9c0134c871defaf435443d53a5b4d17f3b79849ff7f616ea1
+许可说明: https://github.com/uswds/uswds-site/blob/main/LICENSE.md
+
+wcag-errata | WCAG 2.2 errata
+snapshot-2026-11-02 | change_log
+https://www.w3.org/WAI/WCAG22/errata/
+SHA256: 791f1655a8e2e82a9b0a4a60657d3ad06a1eb5a262243f12ae4476e9c4054ed3
+许可说明: https://www.w3.org/WAI/about/using-wai-material/
+
+wcag-new22 | What is new in WCAG 2.2
+snapshot-2026-11-02 | change_log
+https://www.w3.org/WAI/standards-guidelines/wcag/new-in-22/
+SHA256: a73e28fafa21ba6825baab4f7f5a9c51fb05bc2436be89d23189fd2d56ce647c
+许可说明: https://www.w3.org/WAI/about/using-wai-material/
+
+wcag-understanding-contrast | Understanding Contrast Minimum
+snapshot-2026-11-02 | guidance
+https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html
+SHA256: a06d8a7dad2b3c9cadf1d93b1a5372d58adbab65be51e4c4680124d4e47c9999
+许可说明: https://www.w3.org/WAI/about/using-wai-material/
+
+wcag-understanding-target-enhanced | Understanding Target Size Enhanced
+snapshot-2026-11-02 | guidance
+https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html
+SHA256: 2063081312fbf62658cafe6bbc1cb6c1eb4eef34cd3906da0af093c92acf872d
+许可说明: https://www.w3.org/WAI/about/using-wai-material/
+
+wcag-understanding-target-minimum | Understanding Target Size Minimum
+snapshot-2026-11-02 | guidance
+https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html
+SHA256: 361694575d2a4ca5834de57dbc44b24c27ecc67956625703a140b9f1d79c62d4
+许可说明: https://www.w3.org/WAI/about/using-wai-material/
+
+wcag21 | WCAG 2.1 — selected normative criteria
+2.1 / REC-2025-05-06 | normative
+https://www.w3.org/TR/2025/REC-WCAG21-20250506/
+SHA256: 233ac31974ce8575c08932ee1bd71c93879cf9b8426b2bc9b961b3ea8afb8ab6
+许可说明: https://www.w3.org/WAI/about/using-wai-material/
+
+wcag22 | WCAG 2.2 — selected normative criteria
+2.2 / REC-2024-12-12 | normative
+https://www.w3.org/TR/2024/REC-WCAG22-20241212/
+SHA256: 6e3c5fe397257cae509a2fb4752b73062cf8cbeb92c2cec618989b17e4cf7057
+许可说明: https://www.w3.org/WAI/about/using-wai-material/

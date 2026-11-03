@@ -1,0 +1,168 @@
+{
+  "checked_on": "2026-11-02",
+  "status": "official_sources_read; Chinese paraphrase and research annotations, not user-reviewed ground truth",
+  "scope": "WCAG as first method-development corpus; no claim that the overall thesis is restricted to accessibility or that this pilot proves RAG gains",
+  "source_documents": [
+    {
+      "id": "N22",
+      "type": "normative_recommendation",
+      "title": "WCAG 2.2",
+      "dated_url": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/",
+      "publication_date": "2024-12-12",
+      "version": "2.2"
+    },
+    {
+      "id": "N21",
+      "type": "normative_recommendation",
+      "title": "WCAG 2.1",
+      "dated_url": "https://www.w3.org/TR/2025/REC-WCAG21-20250506/",
+      "publication_date": "2025-05-06",
+      "version": "2.1"
+    },
+    {
+      "id": "U258",
+      "type": "informative_understanding",
+      "title": "Understanding SC 2.5.8: Target Size (Minimum)",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+      "version_context": "2.2"
+    },
+    {
+      "id": "U255",
+      "type": "informative_understanding",
+      "title": "Understanding SC 2.5.5: Target Size (Enhanced)",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html",
+      "version_context": "2.2"
+    },
+    {
+      "id": "U143",
+      "type": "informative_understanding",
+      "title": "Understanding SC 1.4.3: Contrast (Minimum)",
+      "url": "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html",
+      "version_context": "2.2"
+    }
+  ],
+  "evidence_cards": [
+    {
+      "id": "E01",
+      "topic": "Minimum target size",
+      "normative_source": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/#target-size-minimum",
+      "explanation_source_id": "U258",
+      "section": "2.5.8",
+      "version": "2.2",
+      "level": "AA",
+      "scope": "pointer inputs",
+      "paraphrase_zh": "基本尺寸要求为24×24 CSS像素；判断须同时保留该条款列出的例外。",
+      "exceptions_ref": "E02",
+      "likely_misjudgment": "把AAA的44×44要求当作AA必需，或仅看图标大小而未确认实际可触发区域。"
+    },
+    {
+      "id": "E02",
+      "topic": "Minimum target size exceptions",
+      "normative_source": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/#target-size-minimum",
+      "explanation_source_id": "U258",
+      "section": "2.5.8 exceptions",
+      "version": "2.2",
+      "level": "AA",
+      "exceptions_zh": [
+        "间距：不足尺寸目标的边界框中心直径24 CSS像素圆，不与其他目标或另一不足尺寸目标的此类圆相交。",
+        "同页有满足本条款的其他控件实现同一功能。",
+        "目标位于句子中，或尺寸受非目标文字行高约束。",
+        "尺寸由用户代理决定且未经作者修改。",
+        "特定呈现对于所传达信息必需，或受法律要求。"
+      ],
+      "likely_misjudgment": "20×20目标并非必然失败；spacing不能简化成统一的任意间距阈值。",
+      "implementation_boundary": "例外可作为已核实的事实输入；本轮无需实现浏览器几何测量。未知不得擅自设为false。"
+    },
+    {
+      "id": "E03",
+      "topic": "Enhanced target size",
+      "normative_source": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/#target-size-enhanced",
+      "also_in_21": "https://www.w3.org/TR/2025/REC-WCAG21-20250506/#target-size",
+      "explanation_source_id": "U255",
+      "section": "2.5.5",
+      "version": "2.2 (also present in 2.1 as Target Size)",
+      "level": "AAA",
+      "scope": "pointer inputs",
+      "paraphrase_zh": "基本尺寸要求为44×44 CSS像素；在仅要求AA时，不作为AAA必需项自动强加。",
+      "exceptions_ref": "E04",
+      "likely_misjudgment": "把≥24与≥44判为不可同时满足的冲突；两下限可以同时满足。"
+    },
+    {
+      "id": "E04",
+      "topic": "Enhanced target size exceptions",
+      "normative_source": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/#target-size-enhanced",
+      "explanation_source_id": "U255",
+      "section": "2.5.5 exceptions",
+      "version": "2.2",
+      "level": "AAA",
+      "exceptions_zh": [
+        "同页存在至少44×44 CSS像素的等效链接或控件。",
+        "目标位于句子或文本块中。",
+        "尺寸由用户代理决定且未经作者修改。",
+        "特定呈现对于所传达信息必需。"
+      ],
+      "likely_misjudgment": "将2.5.8的spacing例外复制到2.5.5；或误把不同页面的等效控件视为满足例外。"
+    },
+    {
+      "id": "E05",
+      "topic": "Contrast thresholds and large-text condition",
+      "normative_source": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/#contrast-minimum",
+      "definition_source": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/#dfn-large-scale",
+      "explanation_source_id": "U143",
+      "section": "1.4.3; large-scale definition",
+      "version": "2.2",
+      "level": "AA",
+      "paraphrase_zh": "普通文本与文本图像的门槛为4.5:1；大字为3:1。大字定义包含至少18pt、14pt粗体，或中日韩字体的等效尺寸。",
+      "likely_misjudgment": "字号条件未知却直接选择3:1；将4.499四舍五入为4.5后判通过。",
+      "implementation_boundary": "pilot使用已复核的large_text布尔条件；不给未知中文字体直接套一个px阈值。"
+    },
+    {
+      "id": "E06",
+      "topic": "Contrast exceptions",
+      "normative_source": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/#contrast-minimum",
+      "explanation_source_id": "U143",
+      "section": "1.4.3 exceptions",
+      "version": "2.2",
+      "level": "AA",
+      "exceptions_zh": [
+        "文本属于未激活控件、纯装饰、对任何人不可见，或含有其他显著视觉内容的图片的一部分。",
+        "属于标志或品牌名称的文本。"
+      ],
+      "likely_misjudgment": "把品牌名称例外扩大为所有使用品牌色的正文；或把一个SC的例外解释成整个页面合规。"
+    },
+    {
+      "id": "E07",
+      "topic": "Version status and selected conformance level",
+      "normative_source": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/#abstract",
+      "conformance_source": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/#cc1",
+      "version": "2.2",
+      "level": "version and conformance metadata",
+      "paraphrase_zh": "2.2的发布不废止或取代2.0、2.1。AA包含A和AA成功标准；AAA再包括AAA标准。",
+      "likely_misjudgment": "看到较新版本就自动把旧项目采用的2.1标为失效；或把单条满足等同于整页AA合规。",
+      "research_observation": "本次固定的2.1文档日期为2025-05-06，2.2为2024-12-12；出版日期顺序不能代替版本语义和项目采用范围判断。",
+      "source_role_note": "版本状态来自Recommendation的说明性摘要；等级要求来自规范性5.2.1。不要把Recommendation中的每个段落都当规范性要求。"
+    },
+    {
+      "id": "E08",
+      "topic": "Source authority and interpretation",
+      "primary_sources": [
+        "https://www.w3.org/WAI/WCAG22/Understanding/target-size-minimum.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/target-size-enhanced.html",
+        "https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"
+      ],
+      "section": "Understanding page header; SC and Intent distinction",
+      "version": "2.2 supporting documents",
+      "level": "informative",
+      "paraphrase_zh": "Understanding页面注明其说明性地位。条款作为要求依据，解释与建议作为帮助理解的材料，保留两种来源角色。",
+      "likely_misjudgment": "把解释页面中的最佳实践直接升级为规范强制要求。",
+      "normative_authority_source": "https://www.w3.org/TR/2024/REC-WCAG22-20241212/#interpreting-normative-requirements"
+    }
+  ],
+  "research_judgments_not_standard_text": [
+    "在本项目的数据结构中，适用性、例外状态、满足情况、资料充分性分开记录；这是研究者的建模决定。",
+    "例外成立可表示当前具体要求获得豁免，不能直接认定整条规范、整个页面或项目全面符合WCAG。",
+    "构造案例用于开发检查流程，必须与真实团队观察和最终留出测试区分。",
+    "WCAG三个条款的开发样例不足以证实该知识组织方法对所有设计规范的普遍收益。"
+  ],
+  "quoting_note": "No verbatim source quotations. Use concise paraphrases and direct official links; do not expand these cards into a copied guideline. The normative-source metadata does not replace reading complete requirements and definitions."
+}

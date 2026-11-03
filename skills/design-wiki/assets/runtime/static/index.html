@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>设计规范活知识库</title>
+  <link rel="stylesheet" href="/style.css">
+  <script defer src="/app.js"></script>
+</head>
+<body>
+  <a class="skip" href="#main">跳到主要内容</a>
+  <div class="app-shell">
+    <aside class="sidebar">
+      <a class="brand" href="#judgment" aria-label="设计规范活知识库首页"><span class="brand-mark" aria-hidden="true">规</span><span>设计规范<br><strong>活知识库</strong></span></a>
+      <p class="sidebar-intro">从条款依据到持续复核</p>
+      <nav aria-label="主要导航">
+        <button class="nav-item active" data-view="judgment"><span class="nav-icon" aria-hidden="true">◎</span>案例判断</button>
+        <button class="nav-item" data-view="library"><span class="nav-icon" aria-hidden="true">▤</span>规范资料</button>
+        <button class="nav-item" data-view="maintenance"><span class="nav-icon" aria-hidden="true">↻</span>维护复核<span id="pending-badge" class="nav-count" hidden>0</span></button>
+        <button class="nav-item" data-view="history"><span class="nav-icon" aria-hidden="true">◷</span>判断历史</button>
+        <a class="experience-link" href="/workflow.html">审核与发布 ↗</a>
+        <a class="experience-link" href="/qa.html">检索问答 ↗</a>
+        <a class="experience-link" href="/ingestion.html">入库检查示例 ↗</a>
+        <a class="experience-link" href="/experience.html">课堂体验 ↗</a>
+      </nav>
+      <div class="sidebar-bottom"><p><strong>Design Wiki</strong><br>Local knowledge workspace</p><a href="/api/export" class="export-link" download>导出项目记录</a></div>
+    </aside>
+    <div class="workspace">
+      <header class="topbar"><span>设计规范活知识库</span><div class="top-actions"><span id="connection" class="connection">正在连接本地服务</span><button class="text-button" id="refresh">刷新</button></div></header>
+      <main id="main" tabindex="-1"><div class="initial-state"><span class="loading-dot"></span><h1>载入规范与判断记录</h1><p>正在读取本地项目数据。</p></div></main>
+      <footer class="site-footer">规范来自 W3C 官方资料。示例情境为开发构造，结果仅针对所选条款。<span>规则维护 · 实时检索问答</span></footer>
+    </div>
+  </div>
+  <div id="toast" role="status" aria-live="polite" hidden></div>
+  <div id="error-bar" role="alert" hidden><span></span><button type="button" aria-label="关闭错误提示">关闭</button></div>
+</body>
+</html>

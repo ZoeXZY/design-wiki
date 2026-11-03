@@ -1,0 +1,4 @@
+interface:
+  display_name: "设计规范活知识库"
+  short_description: "维护设计规范材料与本地规则，保留版本、审核记录和检索问答证据"
+  default_prompt: "使用 $design-wiki 整理规范材料、核对更新影响，并用可追溯证据回答设计问题。"

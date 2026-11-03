@@ -1,0 +1,412 @@
+{
+  "dataset_status": "development_only",
+  "origin_note": "规则来自官方规范；问题、测量值、例外布尔事实为AI辅助构造，非真实用户或实地数据。",
+  "cases": [
+    {
+      "id": "D01",
+      "kind": "assessment",
+      "origin": "constructed_development_case",
+      "question": "AA任务，24×24 CSS像素目标，检查最低尺寸。",
+      "rule_id": "WCAG-2.5.8",
+      "context": {
+        "document_version": "2.2",
+        "level": "AA",
+        "scope": "web_content",
+        "subject": "pointer_target"
+      },
+      "measurements": {
+        "width": 24,
+        "height": 24,
+        "unit": "css_px"
+      },
+      "exceptions": {}
+    },
+    {
+      "id": "D02",
+      "kind": "assessment",
+      "origin": "constructed_development_case",
+      "question": "AA任务，20×20 CSS像素，已核所有例外均不成立。",
+      "rule_id": "WCAG-2.5.8",
+      "context": {
+        "document_version": "2.2",
+        "level": "AA",
+        "scope": "web_content",
+        "subject": "pointer_target"
+      },
+      "measurements": {
+        "width": 20,
+        "height": 20,
+        "unit": "css_px"
+      },
+      "exceptions": {
+        "spacing": false,
+        "equivalent": false,
+        "inline": false,
+        "user_agent": false,
+        "essential": false
+      }
+    },
+    {
+      "id": "D03",
+      "kind": "assessment",
+      "origin": "constructed_development_case",
+      "question": "AA任务，20×20 CSS像素，inline例外已核成立。",
+      "rule_id": "WCAG-2.5.8",
+      "context": {
+        "document_version": "2.2",
+        "level": "AA",
+        "scope": "web_content",
+        "subject": "pointer_target"
+      },
+      "measurements": {
+        "width": 20,
+        "height": 20,
+        "unit": "css_px"
+      },
+      "exceptions": {
+        "inline": true
+      }
+    },
+    {
+      "id": "D04",
+      "kind": "assessment",
+      "origin": "constructed_development_case",
+      "question": "AA任务，20×20 CSS像素，例外信息尚未核实。",
+      "rule_id": "WCAG-2.5.8",
+      "context": {
+        "document_version": "2.2",
+        "level": "AA",
+        "scope": "web_content",
+        "subject": "pointer_target"
+      },
+      "measurements": {
+        "width": 20,
+        "height": 20,
+        "unit": "css_px"
+      },
+      "exceptions": {}
+    },
+    {
+      "id": "D05",
+      "kind": "assessment",
+      "origin": "constructed_development_case",
+      "question": "同一24×24目标，项目提升到AAA，核增强尺寸。",
+      "rule_id": "WCAG-2.5.5",
+      "context": {
+        "document_version": "2.2",
+        "level": "AAA",
+        "scope": "web_content",
+        "subject": "pointer_target"
+      },
+      "measurements": {
+        "width": 24,
+        "height": 24,
+        "unit": "css_px"
+      },
+      "exceptions": {
+        "spacing": false,
+        "equivalent": false,
+        "inline": false,
+        "user_agent": false,
+        "essential": false
+      }
+    },
+    {
+      "id": "D06",
+      "kind": "assessment",
+      "origin": "constructed_development_case",
+      "question": "当前声明级别是否必须按2.5.5增强尺寸核查？",
+      "rule_id": "WCAG-2.5.5",
+      "context": {
+        "document_version": "2.2",
+        "level": "AA",
+        "scope": "web_content",
+        "subject": "pointer_target"
+      },
+      "measurements": {
+        "width": 24,
+        "height": 24,
+        "unit": "css_px"
+      },
+      "exceptions": {
+        "spacing": false,
+        "equivalent": false,
+        "inline": false,
+        "user_agent": false,
+        "essential": false
+      }
+    },
+    {
+      "id": "D07",
+      "kind": "assessment",
+      "origin": "constructed_development_case",
+      "question": "项目明确采用2.1 AA，2.2新增2.5.8是否必需？",
+      "rule_id": "WCAG-2.5.8",
+      "context": {
+        "document_version": "2.1",
+        "level": "AA",
+        "scope": "web_content",
+        "subject": "pointer_target"
+      },
+      "measurements": {
+        "width": 20,
+        "height": 20,
+        "unit": "css_px"
+      },
+      "exceptions": {
+        "spacing": false,
+        "equivalent": false,
+        "inline": false,
+        "user_agent": false,
+        "essential": false
+      }
+    },
+    {
+      "id": "D08",
+      "kind": "assessment",
+      "origin": "constructed_development_case",
+      "question": "未提供目标级别，能否认定2.5.5必须采用？",
+      "rule_id": "WCAG-2.5.5",
+      "context": {
+        "document_version": "2.2",
+        "scope": "web_content",
+        "subject": "pointer_target"
+      },
+      "measurements": {
+        "width": 20,
+        "height": 20,
+        "unit": "css_px"
+      },
+      "exceptions": {
+        "spacing": false,
+        "equivalent": false,
+        "inline": false,
+        "user_agent": false,
+        "essential": false
+      }
+    },
+    {
+      "id": "D09",
+      "kind": "assessment",
+      "origin": "constructed_development_case",
+      "question": "目标测量以设备像素提供，能否直接核CSS像素下限？",
+      "rule_id": "WCAG-2.5.8",
+      "context": {
+        "document_version": "2.2",
+        "level": "AA",
+        "scope": "web_content",
+        "subject": "pointer_target"
+      },
+      "measurements": {
+        "width": 50,
+        "height": 50,
+        "unit": "device_px"
+      },
+      "exceptions": {
+        "spacing": false,
+        "equivalent": false,
+        "inline": false,
+        "user_agent": false,
+        "essential": false
+      }
+    },
+    {
+      "id": "D10",
+      "kind": "assessment",
+      "origin": "constructed_development_case",
+      "question": "普通文本对比度4.0且无例外。",
+      "rule_id": "WCAG-1.4.3",
+      "context": {
+        "document_version": "2.2",
+        "level": "AA",
+        "scope": "web_content",
+        "subject": "text"
+      },
+      "measurements": {
+        "contrast_ratio": 4.0,
+        "text_size": "normal"
+      },
+      "exceptions": {
+        "incidental": false,
+        "logotype": false
+      }
+    },
+    {
+      "id": "D11",
+      "kind": "assessment",
+      "origin": "constructed_development_case",
+      "question": "已核为large文本，对比度4.0且无例外。",
+      "rule_id": "WCAG-1.4.3",
+      "context": {
+        "document_version": "2.2",
+        "level": "AA",
+        "scope": "web_content",
+        "subject": "text"
+      },
+      "measurements": {
+        "contrast_ratio": 4.0,
+        "text_size": "large"
+      },
+      "exceptions": {
+        "incidental": false,
+        "logotype": false
+      }
+    },
+    {
+      "id": "D12",
+      "kind": "assessment",
+      "origin": "constructed_development_case",
+      "question": "对比度4.0，文字大小类别未知。",
+      "rule_id": "WCAG-1.4.3",
+      "context": {
+        "document_version": "2.2",
+        "level": "AA",
+        "scope": "web_content",
+        "subject": "text"
+      },
+      "measurements": {
+        "contrast_ratio": 4.0
+      },
+      "exceptions": {
+        "incidental": false,
+        "logotype": false
+      }
+    },
+    {
+      "id": "D13",
+      "kind": "assessment",
+      "origin": "constructed_development_case",
+      "question": "文字已核属于品牌标志，未测对比度。",
+      "rule_id": "WCAG-1.4.3",
+      "context": {
+        "document_version": "2.2",
+        "level": "AA",
+        "scope": "web_content",
+        "subject": "text"
+      },
+      "measurements": {},
+      "exceptions": {
+        "logotype": true
+      }
+    },
+    {
+      "id": "D14",
+      "kind": "assessment",
+      "origin": "constructed_development_case",
+      "question": "普通文字对比度4.5，未额外检查例外。",
+      "rule_id": "WCAG-1.4.3",
+      "context": {
+        "document_version": "2.2",
+        "level": "AA",
+        "scope": "web_content",
+        "subject": "text"
+      },
+      "measurements": {
+        "contrast_ratio": 4.5,
+        "text_size": "normal"
+      },
+      "exceptions": {}
+    },
+    {
+      "id": "D15",
+      "kind": "assessment",
+      "origin": "constructed_development_case",
+      "question": "20×20目标按2.5.8核实spacing例外成立。",
+      "rule_id": "WCAG-2.5.8",
+      "context": {
+        "document_version": "2.2",
+        "level": "AA",
+        "scope": "web_content",
+        "subject": "pointer_target"
+      },
+      "measurements": {
+        "width": 20,
+        "height": 20,
+        "unit": "css_px"
+      },
+      "exceptions": {
+        "spacing": true
+      }
+    },
+    {
+      "id": "D16",
+      "kind": "assessment",
+      "origin": "constructed_development_case",
+      "question": "AAA项目按2.5.5检查20×20，仅spacing为真，其他例外均否。",
+      "rule_id": "WCAG-2.5.5",
+      "context": {
+        "document_version": "2.2",
+        "level": "AAA",
+        "scope": "web_content",
+        "subject": "pointer_target"
+      },
+      "measurements": {
+        "width": 20,
+        "height": 20,
+        "unit": "css_px"
+      },
+      "exceptions": {
+        "spacing": true,
+        "equivalent": false,
+        "inline": false,
+        "user_agent": false,
+        "essential": false
+      }
+    },
+    {
+      "id": "R01",
+      "kind": "relation",
+      "origin": "constructed_development_case",
+      "question": "在共同的指针目标语境中，24和44两个下限是否构成数值矛盾？",
+      "left_rule": "WCAG-2.5.8",
+      "right_rule": "WCAG-2.5.5",
+      "comparison_context": {
+        "same_object": true,
+        "same_task": true,
+        "same_time": true,
+        "exceptions_excluded": true
+      }
+    },
+    {
+      "id": "R02",
+      "kind": "relation",
+      "origin": "constructed_development_case",
+      "question": "不同对象的目标尺寸要求能否直接判冲突？",
+      "left_rule": "WCAG-2.5.8",
+      "right_rule": "WCAG-2.5.5",
+      "comparison_context": {
+        "same_object": false,
+        "same_task": true,
+        "same_time": true,
+        "exceptions_excluded": true
+      }
+    },
+    {
+      "id": "R03",
+      "kind": "relation",
+      "origin": "constructed_development_case",
+      "question": "对象关系未知，能否直接比较两个数字？",
+      "left_rule": "WCAG-2.5.8",
+      "right_rule": "WCAG-2.5.5",
+      "comparison_context": {
+        "same_task": true,
+        "same_time": true,
+        "exceptions_excluded": true
+      }
+    },
+    {
+      "id": "R04",
+      "kind": "relation",
+      "origin": "constructed_development_case",
+      "question": "目标尺寸和文字对比度能否直接比较？",
+      "left_rule": "WCAG-2.5.8",
+      "right_rule": "WCAG-1.4.3",
+      "comparison_context": {
+        "same_object": true,
+        "same_task": true,
+        "same_time": true,
+        "exceptions_excluded": true
+      }
+    }
+  ]
+}

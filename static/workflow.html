@@ -1,0 +1,18 @@
+<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>审核与发布 · 设计规范活知识库</title><link rel="stylesheet" href="/style.css"><link rel="stylesheet" href="/flow.css"><script defer src="/workflow.js"></script></head><body><main class="flow-shell">
+<header class="flow-header"><nav><a href="/">返回知识库</a><a href="/qa.html">检索问答</a><a href="/ingestion.html">入库检查示例</a></nav><span>Design Wiki · Open source</span></header>
+<h1 class="flow-title">从候选材料，到有依据的规则更新</h1><p class="flow-lead">提交候选，记录人工裁决，预览受影响的判断，再发布本地修订。已保存的结论不会被覆盖；复核后产生新的版本。</p>
+<p class="flow-notice">本页发布的是本地项目规则修订，保留官方出处；不代表W3C发布了新版本。材料核查由复核人完成，系统负责结构检查、基准核对和记录追踪。</p><p id="error" class="flow-error" role="alert"></p><p id="notice" class="flow-progress" role="status"></p>
+<div class="flow-grid"><section class="panel"><h2>1. 提交候选材料</h2><form id="submit-form">
+<label class="field">关联规则<select id="rule"></select></label><p id="rule-source" class="flow-meta"></p><div id="patch-fields" class="form-grid"></div>
+<label class="field">修订后的简述<textarea id="summary"></textarea></label>
+<label class="field">材料标题<input id="material-title" required value="本地项目规则修订说明"></label>
+<label class="field">材料正文／修订依据<textarea id="material-text" required placeholder="写明为什么修改、适用的项目条件，以及从哪里取得依据。至少20字。"></textarea></label>
+<label class="field">来源位置或核查说明<input id="material-source" required placeholder="文档版本、条款位置或本地实验目的"></label>
+<label class="field">关联已登记材料（可选）<select id="document"><option value="">直接使用上面的新材料</option></select></label>
+<label class="field">已知冲突（可选，每行一条）<textarea id="conflicts" placeholder="记录仍需裁决的问题；不自动判断哪一条覆盖哪一条。"></textarea></label>
+<button class="primary-button" type="submit">检查并提交候选</button><p class="flow-meta">此步骤不改变当前规则。暂不自动解析Word/PDF，使用明确的结构化字段与材料正文。</p></form></section>
+<section class="panel"><h2>2. 裁决与影响预览</h2><label class="field">候选版本<select id="candidate-select"></select></label><div id="candidate-view">暂无候选版本。</div>
+<form id="review-form"><label class="field">实际复核人<input id="reviewer" required placeholder="请填写实际作出本次裁决的人"></label><label class="field">裁决理由<textarea id="reason" required placeholder="说明接受或退回的理由，至少8字。"></textarea></label><label class="field">已核查的依据<textarea id="evidence" required placeholder="原文位置、条件核查或测试记录，至少8字。"></textarea></label><label class="field">冲突裁定（有冲突时必填）<textarea id="resolution" placeholder="明确裁定及适用范围；不能仅写“已解决”。"></textarea></label>
+<div class="actions"><button id="approve" class="primary-button" type="submit" value="approve">批准本地修订</button><button id="reject" class="secondary-button" type="submit" value="reject">退回候选</button></div></form>
+<div class="actions"><button id="preview" class="secondary-button" disabled>预览发布影响</button><button id="publish" class="primary-button" disabled>发布本地修订</button></div><div id="impact"></div><p class="flow-meta">复核人身份为本地填写，不是认证签名。发布后返回“维护复核”处理旧判断，或在问答历史中重新生成受影响的回答。</p></section>
+<section class="panel wide"><h2>发布记录</h2><div id="publications"></div><a href="/api/export" download>导出候选、裁决、发布及判断历史</a></section></div></main></body></html>

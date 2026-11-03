@@ -1,0 +1,3 @@
+# Optional CA bundle for Python installations without working HTTPS certificates.
+# The application and offline tests otherwise use the Python standard library.
+certifi>=2024.2.2

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "DEMO-TEAM-BUTTON",
+    "title": "团队按钮说明（构造示例）",
+    "version": "demo-v2",
+    "origin": "由真实事故机制转化的匿名构造案例；数值及规则不代表任何组织正式规范",
+    "blocks": [
+      {"id": "scope", "text": "适用范围：本示例项目的网页按钮。"},
+      {"id": "requirement", "text": "使用前先明确采用的规范版本与项目要求级别。"},
+      {"id": "reviewed-exception", "text": "已确认修订：项目条件未给全时，保留待补充状态，不直接宣布适用。"},
+      {"id": "citation", "text": "判断应保留条款编号、来源和当时的条件。"}
+    ],
+    "protected_block_ids": ["reviewed-exception"],
+    "source_body_available": true,
+    "open_conflicts": [],
+    "registration_status": "synthetic_baseline"
+  },
+  {
+    "id": "DEMO-COLOR-CONFLICT",
+    "title": "颜色用途待裁示例（构造示例）",
+    "version": "demo-v1",
+    "origin": "根据台账中的待裁议题构造，不判定原项目哪条规范正确",
+    "blocks": [
+      {"id": "policy", "text": "规则甲把强调色限定用于结果状态。"},
+      {"id": "example", "text": "同一适用范围的示例乙也用强调色突出普通说明。"}
+    ],
+    "protected_block_ids": [],
+    "source_body_available": true,
+    "open_conflicts": ["同一范围的规则甲与示例乙用途不一致，尚无裁决依据"],
+    "registration_status": "synthetic_baseline_pending_decision"
+  }
+]

@@ -1,0 +1,132 @@
+{
+  "schema_version": "0.1",
+  "status": "AI 整理并核对官方来源的开发结构；待作者逐条复核",
+  "supported_document_versions": [
+    "2.1",
+    "2.2"
+  ],
+  "level_order": [
+    "A",
+    "AA",
+    "AAA"
+  ],
+  "rules": [
+    {
+      "id": "WCAG-2.5.8",
+      "criterion": "2.5.8",
+      "title": "Target Size (Minimum)",
+      "kind": "minimum_rectangle",
+      "required_level": "AA",
+      "versions": [
+        "2.2"
+      ],
+      "scope": "web_content",
+      "subjects": [
+        "pointer_target"
+      ],
+      "unit": "css_px",
+      "min_width": 24,
+      "min_height": 24,
+      "exceptions": [
+        "spacing",
+        "equivalent",
+        "inline",
+        "user_agent",
+        "essential"
+      ],
+      "source": {
+        "normative": true,
+        "urls": [
+          "https://www.w3.org/TR/2024/REC-WCAG22-20241212/#target-size-minimum"
+        ],
+        "checked_on": "2026-11-02"
+      },
+      "summary": "指针目标的最低尺寸要求及明示例外。",
+      "exception_meanings": {
+        "spacing": "不足尺寸目标边界框中心的24 CSS像素直径圆，不与其他目标或其他不足尺寸目标的同类圆相交；须按完整原文核查",
+        "equivalent": "同页存在符合本准则要求、功能相同的其他控件",
+        "inline": "位于句子中，或尺寸受周围非目标文本行高限制",
+        "user_agent": "尺寸由用户代理确定且作者未修改",
+        "essential": "该特定呈现对信息本质成立，或法律要求该呈现"
+      },
+      "limits": "不自动测量页面、间距或例外成立性。"
+    },
+    {
+      "id": "WCAG-2.5.5",
+      "criterion": "2.5.5",
+      "title": "Target Size (Enhanced)",
+      "kind": "minimum_rectangle",
+      "required_level": "AAA",
+      "versions": [
+        "2.1",
+        "2.2"
+      ],
+      "scope": "web_content",
+      "subjects": [
+        "pointer_target"
+      ],
+      "unit": "css_px",
+      "min_width": 44,
+      "min_height": 44,
+      "exceptions": [
+        "equivalent",
+        "inline",
+        "user_agent",
+        "essential"
+      ],
+      "source": {
+        "normative": true,
+        "urls": [
+          "https://www.w3.org/TR/2025/REC-WCAG21-20250506/#target-size",
+          "https://www.w3.org/TR/2024/REC-WCAG22-20241212/#target-size-enhanced"
+        ],
+        "checked_on": "2026-11-02"
+      },
+      "summary": "增强级指针目标尺寸要求；没有间距例外。",
+      "exception_meanings": {
+        "equivalent": "同页存在尺寸至少44×44 CSS像素、功能相同的链接或控件",
+        "inline": "位于句子或文本块中",
+        "user_agent": "尺寸由用户代理确定且作者未修改",
+        "essential": "该特定呈现对信息本质成立"
+      },
+      "limits": "仅核查本准则，不得据此宣称整个页面符合AAA。"
+    },
+    {
+      "id": "WCAG-1.4.3",
+      "criterion": "1.4.3",
+      "title": "Contrast (Minimum)",
+      "kind": "minimum_contrast",
+      "required_level": "AA",
+      "versions": [
+        "2.1",
+        "2.2"
+      ],
+      "scope": "web_content",
+      "subjects": [
+        "text",
+        "image_of_text"
+      ],
+      "thresholds": {
+        "normal": 4.5,
+        "large": 3.0
+      },
+      "exceptions": [
+        "incidental",
+        "logotype"
+      ],
+      "source": {
+        "normative": true,
+        "urls": [
+          "https://www.w3.org/TR/2024/REC-WCAG22-20241212/#contrast-minimum"
+        ],
+        "checked_on": "2026-11-02"
+      },
+      "summary": "文本对比度的普通和大号文字条件；附带例外。",
+      "exception_meanings": {
+        "incidental": "符合原文 incidental 条件，如非活动组件、纯装饰、不可见或图片中其他重要内容的一部分",
+        "logotype": "文字属于标志或品牌名称"
+      },
+      "limits": "large是已按规范定义确认的类别；本脚本不从字体名称或截图推断，不计算色彩对比度。"
+    }
+  ]
+}

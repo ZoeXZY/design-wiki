@@ -1,0 +1,122 @@
+{
+  "status": "AI起草的开发参考判断，需作者复核；未盲测",
+  "read_by_inference": false,
+  "judgments": [
+    {
+      "id": "D01",
+      "applicability": "适用",
+      "assessment": "pass",
+      "rationale": "尺寸已充分满足，不需要额外证明所有例外不成立。"
+    },
+    {
+      "id": "D02",
+      "applicability": "适用",
+      "assessment": "fail",
+      "rationale": "在无例外条件下，尺寸未满足。"
+    },
+    {
+      "id": "D03",
+      "applicability": "适用",
+      "assessment": "exempt",
+      "rationale": "是准则中的例外适用，不应误当整个准则与任务无关。"
+    },
+    {
+      "id": "D04",
+      "applicability": "适用",
+      "assessment": "unknown",
+      "rationale": "例外可能改变结论，不能直接判失败。"
+    },
+    {
+      "id": "D05",
+      "applicability": "适用",
+      "assessment": "fail",
+      "rationale": "AAA增强准则的44下限适用。"
+    },
+    {
+      "id": "D06",
+      "applicability": "不适用",
+      "assessment": "not_required",
+      "rationale": "当前声明的AA目标不要求AAA准则；可另作设计建议。"
+    },
+    {
+      "id": "D07",
+      "applicability": "不适用",
+      "assessment": "not_required",
+      "rationale": "版本2.1没有2.5.8；不自动重写项目采用版本。"
+    },
+    {
+      "id": "D08",
+      "applicability": "待确认",
+      "assessment": "unknown",
+      "rationale": "目标级别缺失，适用性待确认。"
+    },
+    {
+      "id": "D09",
+      "applicability": "适用",
+      "assessment": "unknown",
+      "rationale": "未给换算依据，不能默认设备像素等同CSS像素。"
+    },
+    {
+      "id": "D10",
+      "applicability": "适用",
+      "assessment": "fail",
+      "rationale": "普通文本阈值4.5。"
+    },
+    {
+      "id": "D11",
+      "applicability": "适用",
+      "assessment": "pass",
+      "rationale": "large分支阈值3.0。"
+    },
+    {
+      "id": "D12",
+      "applicability": "适用",
+      "assessment": "unknown",
+      "rationale": "分类不同会改变判断，不能猜测字体类别。"
+    },
+    {
+      "id": "D13",
+      "applicability": "适用",
+      "assessment": "exempt",
+      "rationale": "明确例外成立，本次准则不要求该项测量。"
+    },
+    {
+      "id": "D14",
+      "applicability": "适用",
+      "assessment": "pass",
+      "rationale": "充分满足下限，可不依赖例外。"
+    },
+    {
+      "id": "D15",
+      "applicability": "适用",
+      "assessment": "exempt",
+      "rationale": "本准则明示spacing例外。"
+    },
+    {
+      "id": "D16",
+      "applicability": "适用",
+      "assessment": "fail",
+      "rationale": "2.5.5没有spacing例外，不能跨准则迁移例外。"
+    },
+    {
+      "id": "R01",
+      "relation": "兼容",
+      "rationale": "两个约束可由44×44及更大尺寸同时满足；级别不同仍须分别判断是否必需。"
+    },
+    {
+      "id": "R02",
+      "relation": "不可比",
+      "rationale": "对象不同，不能建立当前比较条件。"
+    },
+    {
+      "id": "R03",
+      "relation": "未知",
+      "rationale": "比较前提缺失。"
+    },
+    {
+      "id": "R04",
+      "relation": "不可比",
+      "rationale": "测量属性不同，不属于同一数值约束。"
+    }
+  ]
+}
